@@ -1,0 +1,26 @@
+--a SQL query displays the top 5 customers with their location, number of rentals, and total amount paid
+WITH total_amount_paid_cte (customer_id, total_amount_paid) AS
+          (SELECT   customer.customer_id,
+                    SUM(payment.amount) AS total_amount_paid
+          FROM customer
+          JOIN payment ON customer.customer_id = payment.customer_id
+          GROUP BY customer.customer_id)
+SELECT    customer.customer_id,
+          customer.first_name,
+          customer.last_name,
+          country.country,
+          COUNT(rental.rental_id) AS number_of_rentals,
+          total_amount_paid_cte.total_amount_paid
+FROM customer
+LEFT JOIN address ON customer.address_id = address.address_id
+LEFT JOIN city ON address.city_id = city.city_id
+LEFT JOIN country ON city.country_id = country.country_id
+LEFT JOIN rental ON customer.customer_id = rental.customer_id
+LEFT JOIN total_amount_paid_cte ON customer.customer_id = total_amount_paid_cte.customer_id
+GROUP BY  customer.customer_id,
+          customer.first_name,
+          customer.last_name,
+          country.country,
+          total_amount_paid_cte.total_amount_paid
+ORDER BY total_amount_paid  DESC
+LIMIT 5;
