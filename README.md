@@ -1,7 +1,7 @@
 # data_science_portfolio
 Portfolio of data science projects completed for data analytics course and self learning. Presented in the form of Jupyter notebooks, Tableau public
 # Projects
-Rockbuster-SQL
+[Rockbuster-SQL](https://github.com/apinya-b/data_science_portfolio/tree/50568c156ab43a54b44ff6d3d3cd12f12f0676a9/Rockbuster-SQL)
 Analyzing Rockbuster Stealth - A Movie Rental Company's Database. This project is part of a Data Analytics course with Career Foundry, utilizing SQL for insights.
 
 [Instacart-Python](https://github.com/apinya-b/data_science_portfolio/tree/9ea0f752a0188e773791754b9bbc2bfa1bd215b6/Instacart-Python)
