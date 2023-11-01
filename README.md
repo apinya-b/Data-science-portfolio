@@ -1,4 +1,4 @@
-# data-science-portfolio
+# Data-Science-Portfolio
 Portfolio of data science projects completed for data analytics course and self learning. Presented in the form of Jupyter notebooks,Excel, and Tableau public.
 # Projects
 [Rockbuster-SQL](https://github.com/apinya-b/data_science_portfolio/tree/50568c156ab43a54b44ff6d3d3cd12f12f0676a9/Rockbuster-SQL)
